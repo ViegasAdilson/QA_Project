@@ -3,5 +3,5 @@ WORKDIR /QA_Project
 COPY . .
 RUN pip install Flask 
 RUN pip install mysql-connector-python
-CMD [ "python", "app.py" ]
+CMD [ "python3", "app.py" ]
 EXPOSE 5000
