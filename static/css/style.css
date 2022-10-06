@@ -1,0 +1,113 @@
+* {
+    font-family: 'Roboto Slab', serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    background-image: url('../picture_files/agenda.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+section{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#entra-div {
+    display: flex;
+    width: 600px;
+    height: 400px;
+    margin-top: 200px;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 50px;
+    position: relative;
+}
+
+#entra-div h3 {
+    font-size: 40px;
+
+}
+.div_list{
+    width: 80%;
+    margin: 0px auto;
+}
+.div_list table{
+    border-radius: 50px;
+
+}
+.edt_con{
+    border-radius: 50px;
+}
+
+.detalhes_contact{
+    margin: 120px auto;
+    max-width: 80%;
+}
+
+.form label,
+.form input {
+    display: block;
+    width: 100%,
+}
+
+.form button {
+    display: inline;
+    margin: 10px 30px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.form label {
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+
+.form input {
+    margin-bottom: 20px;
+    width: 300px;
+}
+.profile_pic{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.profile_pic img{
+    border: 5px solid white;
+    border-radius: 5px;
+    width: 80%;
+    height: 80%;
+    margin: 20px;
+    transition: .5s ease-in-out;
+    user-select: none;
+}
+
+.profile_pic img:hover{
+    transform: scale(1.05);
+    filter: grayscale(0%);
+    box-shadow: 8px 8px 20px white;
+    cursor: pointer;
+}
+.list_pic{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+footer{
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+    background-color: white;
+
+}
