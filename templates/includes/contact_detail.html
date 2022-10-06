@@ -1,0 +1,38 @@
+<div class="modal fade" style="background-color: rgba(0, 0, 0, 0.6); padding: 0 0 0 17px;"
+  id="detalhes_contact-{{contact[0]}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog detalhes_contact">
+    <div class="modal-content bg-dark text-white" style="border-radius: 50px;">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalLabel">
+          <!-- -->
+          Contact Details
+        </h5>
+        <button type="button" class="close text-info" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-8">
+            <p><span class="text-info">Nome:</span> {{contact[1]}}</p>
+            <p><span class="text-info">Surname:</span> {{contact[2]}}</p>
+            <p><span class="text-info">Phone:</span> {{contact[3]}}</p>
+            <p><span class="text-info">Email:</span> {{ contact[4]}}</p>
+            <p><span class="text-info">Home Address:</span> {{contact[5]}}</p>
+            <p><span class="text-info">Description:</span> {{contact[6]}}</p>
+          </div>
+          <div class="col-4 profile_pic">
+            <img src="/static/picture_files/{{contact[7]}}" alt="">
+          </div>
+        </div>
+        <div class="d-flex">
+          <a class="p-3 mr-auto" href="{{url_for('delete_page', id=contact[0])}}"><i
+              class="fas fa-trash-alt text-info"></i></a>
+          <a class="p-3 ml-auto" href="{{url_for('edit_contact', name_send=contact[1])}}"><i
+              class="fas fa-user-edit text-info"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

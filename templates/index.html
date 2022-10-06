@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {% block title%} Login {% endblock%} {% block
+section%}
+<div class="col-2"></div>
+<div id="entra-div" class="col-8 bg-dark text-white p-5">
+  <h3>Login</h3>
+  <form action="" class="form" method="post">
+    <label>Email:</label>
+    <input type="text" name="email" class="form-control" required />
+    <label>Password:</label>
+    <input type="password" name="passwd" class="form-control" required />
+    <input type="submit" class="btn btn-lg btn-info" value="Log In" />
+  </form>
+</div>
+<div class="col-2"></div>
+{% endblock%}

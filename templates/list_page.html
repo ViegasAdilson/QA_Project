@@ -1,0 +1,54 @@
+{% extends 'base.html' %} {% block head%} Contact_List {%endblock%} {% block
+section %}
+
+<div class="div_list">
+  <h4 style="text-align: right">Welcome {{name_user}}!</h4>
+  <table class="table table-dark mt-5">
+    <thead>
+      <tr>
+        <th scope="col" class="text-center">Profile Image</th>
+        <th scope="col" class="text-center">Name</th>
+        <th scope="col" class="text-center">Surname</th>
+        <th scope="col" class="text-center">Phone Number</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Your rows inside the table HERE: -->
+      {% for contact in all_user %} {% include 'includes/contact_detail.html' %}
+      <tr>
+        <td class="text-center">
+          <a
+            class="text-white"
+            href=""
+            data-toggle="modal"
+            data-target="#detalhes_contact-{{contact.id}}"
+            ><img
+              class="list_pic"
+              src="/static/picture_files/{{contact[7]}}"
+              alt=""
+          /></a>
+        </td>
+        <td class="text-center">
+          <a
+            class="text-info"
+            href=""
+            data-toggle="modal"
+            data-target="#detalhes_contact-{{contact[0]}}"
+            >{{contact[1]}}</a
+          >
+        </td>
+        <td class="text-center text-info">{{contact[2]}}</td>
+        <td class="text-center text-info">{{contact[3]}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% include 'includes/add_contact.html' %}
+  <span
+    class="btn btn-info"
+    data-toggle="modal"
+    data-target="#modal_add_contact"
+    ><i class="fas fa-user-plus"></i
+  ></span>
+</div>
+{% endblock%}

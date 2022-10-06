@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+      <div class="modal fade mt-5" style="background-color: rgba(0, 0, 0, 0.6); padding: 0 0 0 17px;"
+        id="modal_add_contact" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content bg-dark text-white" style="border-radius: 50px;">
+            <div class="modal-header">
+              <h5 class="modal-title" id="ModalLabel">
+                <!-- -->
+                Add New Contact
+              </h5>
+              <button type="button" class="close text-info" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form action="{{url_for('list_page')}}" method="post" enctype="multipart/form-data">
+                <label>Name:</label>
+                <input class="form-control mt-2" type="text" name="name">
+                <label>Surname:</label>
+                <input class="form-control mt-2" type="text" name="surname">
+                <label>Phone Number:</label>
+                <input class="form-control mt-2" type="tel" name="phone">
+                <label>Email:</label>
+                <input class="form-control mt-2" type="email" name="email">
+                <label>Home Address:</label>
+                <input class="form-control mt-2" type="text" name="address">
+                <label>Description:</label>
+                <textarea name="description" id="" cols="56" rows="3">
+
+            </textarea>
+                <label>Profile Picture:</label>
+                <input class="form-control mt-2" type="file" name="picture" id="picture" enctype="multipart/form-data">
+                <input class="btn btn-lg mt-2 btn-info" type="submit" value="Save">
+              </form>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-2"></div>
+  </div>
+</div>
