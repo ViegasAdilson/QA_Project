@@ -6,8 +6,8 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = '300922'
 mydb = mysql.connector.connect(
     host="localhost",
-    user="own",
-    password="ownroot",
+    user="root",
+    password="root",
     database="agenda"
 )
 
