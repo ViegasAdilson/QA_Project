@@ -5,7 +5,6 @@ COPY . .
 RUN pip install Flask
 RUN pip install mysql-connector-python
 
-FROM mysql:latest
 ENV MYSQL_ROOT_PASSWORD=root
 COPY ./agenda.sql /docker-entrypoint-initdb.d/
 
