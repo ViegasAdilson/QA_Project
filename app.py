@@ -5,10 +5,11 @@ import os
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '300922'
 mydb = mysql.connector.connect(
-    host="localhost",
+    host="mysql",
     user="root",
     password="root",
     database="agenda"
+    port="3306"
 )
 
 conn = mydb.cursor()
