@@ -8,7 +8,6 @@ mydb = mysql.connector.connect(
     user="root",
     password="root",
     database="agenda"
-    port="3306"
 )
 
 conn = mydb.cursor()
